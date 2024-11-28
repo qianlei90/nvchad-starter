@@ -1,25 +1,24 @@
 return {
   {
-    "stevearc/conform.nvim",
-    -- event = 'BufWritePre', -- uncomment for format on save
-    opts = require "configs.conform",
+    "justinmk/vim-sneak",
+    lazy = false,
+    config = function()
+      -- 启用 label 功能
+      vim.g['sneak#label'] = 1
+    end,
   },
-
-  -- These are some examples, uncomment them if you want to see them work!
+  {
+    "tpope/vim-repeat",
+    lazy = false
+  },
+  {
+    "tpope/vim-surround",
+    lazy = false
+  },
   {
     "neovim/nvim-lspconfig",
     config = function()
       require "configs.lspconfig"
     end,
   },
-
-  -- {
-  -- 	"nvim-treesitter/nvim-treesitter",
-  -- 	opts = {
-  -- 		ensure_installed = {
-  -- 			"vim", "lua", "vimdoc",
-  --      "html", "css"
-  -- 		},
-  -- 	},
-  -- },
 }
