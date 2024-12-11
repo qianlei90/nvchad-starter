@@ -1,8 +1,19 @@
 require "nvchad.options"
 
-local autocmd = vim.api.nvim_create_autocmd
+-- 缩进
+-- tab 转空格
+vim.opt.expandtab = true
+-- tab 宽度
+vim.opt.tabstop = 4
+-- 缩进的空格数
+vim.opt.shiftwidth = 4
+-- 退格删除的空格数，-1与shiftwidth相等
+vim.opt.softtabstop = -1
+-- 缩进取整
+vim.opt.shiftround = true
 
-autocmd("BufReadPost", {
+-- 打开文件时光标回到上次离开的地方
+vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "*",
   callback = function()
     local line = vim.fn.line "'\""
@@ -15,4 +26,10 @@ autocmd("BufReadPost", {
       vim.cmd 'normal! g`"'
     end
   end,
+})
+
+-- 自动关闭 quickfix 窗口
+vim.api.nvim_create_autocmd("FileType", {
+  pattern = {"qf"},
+  command = [[nnoremap <buffer> <CR> <CR>:cclose<CR>]]
 })
