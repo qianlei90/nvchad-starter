@@ -12,6 +12,16 @@ vim.opt.softtabstop = -1
 -- 缩进取整
 vim.opt.shiftround = true
 
+-- 其他
+-- 括号配对情况,跳转并高亮一下匹配的括号
+vim.opt.showmatch = true
+-- 显示字符
+vim.opt.list = true
+-- 一行太长的话不折叠成多行
+vim.opt.wrap = false
+-- 操作只复制到 * 寄存器
+vim.opt.clipboard = ""
+
 -- 打开文件时光标回到上次离开的地方
 vim.api.nvim_create_autocmd("BufReadPost", {
   pattern = "*",
