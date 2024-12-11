@@ -1,5 +1,11 @@
 return {
   {
+    "neovim/nvim-lspconfig",
+    config = function()
+      require "configs.lspconfig"
+    end,
+  },
+  {
     "justinmk/vim-sneak",
     lazy = false,
     config = function()
@@ -14,11 +20,5 @@ return {
   {
     "tpope/vim-surround",
     lazy = false
-  },
-  {
-    "neovim/nvim-lspconfig",
-    config = function()
-      require "configs.lspconfig"
-    end,
-  },
+  }
 }
