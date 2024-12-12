@@ -1,9 +1,14 @@
 local configs = require "nvchad.configs.lspconfig"
 
 local servers = {
-    gopls = {},
+    autotools_ls = {},
+    bashls = {},
+    docker_compose_language_service = {},
+    dockerls = {},
     golangci_lint_ls = {},
-    pylsp = {},
+    gopls = {},
+    helm_ls = {},
+    jsonls = {},
     lua_ls = {
         settings = {
             Lua = {
@@ -15,6 +20,14 @@ local servers = {
             }
         }
     },
+    nginx_language_server = {},
+    nil_ls = {},
+    protols = {},
+    pylsp = {},
+    terraformls = {},
+    thriftls = {},
+    vimls = {},
+    yamlls = {},
 }
 
 for name, opts in pairs(servers) do

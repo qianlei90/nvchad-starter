@@ -26,8 +26,9 @@ vim.keymap.set('c', '<A-f>', '<S-Right>')
 vim.keymap.set('c', '<A-b>', '<S-Left>')
 
 -- 保存退出
-vim.keymap.set('i', '<C-s>', '<Ecs>:w<CR>')
-vim.keymap.set('n', '<C-q>', ':q<CR>')
+-- vim.keymap.set('i', '<C-s>', '<Ecs>:w<CR>')
+-- vim.keymap.set('n', '<C-q>', ':q<CR>')
+vim.keymap.set('t', '<C-w><C-q>', '<C-\\><C-n>:q<CR>')
 
 -- gitblame
 vim.keymap.set('n', '<Leader>gb', ':GitBlameToggle<CR>', { desc = "toggle git blame"})
