@@ -7,6 +7,15 @@ local servers = {
     dockerls = {},
     golangci_lint_ls = {},
     gopls = {},
+    harper_ls = {
+        settings = {
+            ["harper-ls"] = {
+                linters = {
+                    sentence_capitalization = false,
+                },
+            },
+        },
+    },
     helm_ls = {},
     jsonls = {},
     lua_ls = {

@@ -1,4 +1,4 @@
-return {
+local lazy_config = {
   defaults = { lazy = true },
   install = { colorscheme = { "nvchad" } },
 
@@ -45,3 +45,14 @@ return {
     },
   },
 }
+
+require("lazy").setup({
+  {
+    "NvChad/NvChad",
+    lazy = false,
+    branch = "v2.5",
+    import = "nvchad.plugins",
+  },
+
+  { import = "plugins" },
+}, lazy_config)

@@ -5,7 +5,7 @@
 ---@class ChadrcConfig
 local M = {
     base46 = {
-        theme = "nightowl"
+        theme = "nightowl",
     },
     mason = {
         pkgs = {
