@@ -24,7 +24,9 @@ return {
     "f-person/git-blame.nvim",
     event = "VeryLazy",
     opts = function()
-      require "configs.git-blame"
+      require("gitblame").setup {
+        enabled = false,
+      }
     end,
   },
   {
