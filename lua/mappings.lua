@@ -5,7 +5,6 @@ vim.keymap.set("n", "<C-t>", "<cmd>tabnew<CR>", { desc = "open new tab" })
 vim.keymap.set("n", "<C-n>", "<cmd>tabnext<CR>", { desc = "next tab" })
 vim.keymap.set("n", "<C-p>", "<cmd>tabprev<CR>", { desc = "previous tab" })
 -- 移动 Tab
--- TODO: 未生效
 vim.keymap.set('n', '<S-Left>', '<cmd>tabmove -1<CR>', { desc = "Move Tab To Left" })
 vim.keymap.set('n', '<S-Right>', '<cmd>tabmove +1<CR>', { desc = "Move Tab To Right"})
 

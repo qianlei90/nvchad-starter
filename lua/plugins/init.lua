@@ -42,4 +42,11 @@ return {
       require("nvim-rooter").setup()
     end,
   },
+  {
+    "nmac427/guess-indent.nvim",
+    lazy = false,
+    config = function()
+      require("guess-indent").setup()
+    end,
+  },
 }
