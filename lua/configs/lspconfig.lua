@@ -32,7 +32,17 @@ local servers = {
   nginx_language_server = {},
   nil_ls = {},
   protols = {},
-  pylsp = {},
+  pylsp = {
+    settings = {
+      pylsp = {
+        plugins = {
+          pycodestyle = {
+            ignore = { "E501" },
+          },
+        },
+      },
+    },
+  },
   terraformls = {},
   thriftls = {},
   vimls = {},
