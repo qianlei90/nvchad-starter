@@ -54,5 +54,8 @@ require("lazy").setup({
     import = "nvchad.plugins",
   },
 
-  { import = "plugins" },
+  { import = "plugins.plugins_terminal", cond = (function() return not vim.g.vscode end) },
+	{ import = "plugins.plugins_always", cond = true },
+	{ import = "plugins.plugins_vscode", cond = (function() return vim.g.vscode end) },
+
 }, lazy_config)
