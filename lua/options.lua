@@ -1,6 +1,6 @@
 require "nvchad.options"
 
--- add yours here!
+vim.o.shell = vim.env.HOME .. "/.nix-profile/bin/zsh"
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
+vim.env.PATH = vim.env.HOME .. "/.nix-profile/bin:" .. vim.env.PATH
+vim.opt.clipboard = ""
